@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    hello
+
+    <script>
+      // Function to load the navbar
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.getElementById("nav-menu");
+            const dropdownItems = document.querySelectorAll(
+              ".nav-item.dropdown > a"
+            );
+
+            hamburger.addEventListener("click", () => {
+              navMenu.classList.toggle("active");
+              hamburger.setAttribute(
+                "aria-expanded",
+                navMenu.classList.contains("active")
+              );
+            });
+
+            // Add click event listener for dropdown items
+            dropdownItems.forEach((item) => {
+              item.addEventListener("click", (event) => {
+                // Prevent the default anchor behavior
+                event.preventDefault();
+                const dropdownMenu = item.nextElementSibling; // Get the associated dropdown menu
+
+                // Toggle the clicked dropdown menu
+                item.parentElement.classList.toggle("active");
+
+                // Close other dropdowns
+                dropdownItems.forEach((otherItem) => {
+                  if (otherItem !== item) {
+                    otherItem.parentElement.classList.remove("active");
+                  }
+                });
+              });
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+            document.getElementById("navbar").innerHTML =
+              "<p>Error loading navbar. Please try again later.</p>";
+          });
+      }
+
+      // Load the navbar when the page loads
+      window.onload = loadNavbar;
+    </script>
+  </body>
+</html>

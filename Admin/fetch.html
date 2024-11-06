@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Gallery</h1>
+  <div id="gallery-container"></div>
+
+  <script>
+    // Fetch images from the backend
+    console.log("1")
+    fetch('http://localhost:3000/images')
+      .then(response => response.json())
+      .then(data => {
+ 
+          const galleryContainer = document.getElementById('gallery-container');
+        data.forEach(image => {
+          const imgElement = document.createElement('img');
+          imgElement.src = `http://localhost:3000/image/${image._id}`;
+          imgElement.alt = image.name;
+          imgElement.style.width = '300px';
+          imgElement.style.height = '300px';
+          galleryContainer.appendChild(imgElement);
+        });
+        }
+        
+      )
+      .catch(error => console.error('Error fetching images:', error));
+  </script>
+</body>
+</html>

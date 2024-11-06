@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="About/deveopmentTeam.css">
+  <title>School Committee</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src=images/logo.png height=60px width=60px>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">About Us</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Vision & Mission</a></li>
+            <li><a href="#">Founders</a></li>
+            <li><a href="management.html">School Management</a></li>
+            <li><a href="deveopmentTeam.html">School Committee</a></li>
+            <li><a href="staff.html">Staff</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Academics</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Middle School</a></li>
+            <li><a href="#">Senior School</a></li>
+            <li><a href="#">Junior College</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Beyond Classroom</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Cultural</a></li>
+            <li><a href="#">Social</a></li>
+            <li><a href="#">Happy Saturday</a></li>
+            <li><a href="#">Various Commities</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <!--  -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <hr>
+        <ul>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Archive</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <hr>
+        <address>
+          <p>📍 Swatantrya Sainik Raykumar B Gujar Secondary and Higher Secondary Prashala,Talegoan Dhamdhere, Pune-412208, Maharashtra, India.</p>
+          <p>📞 +91-020-25559200, 020-25559201 (Principal)</p>
+          <p>📠 +91-020-25559200</p>
+          <p>✉️ principal@ssrb.ac.in</p>
+        </address>
+      </div>
+    </div>
+    <!-- <div class="footer-bottom">
+                <p>© Copyright 2022. Designed and Developed by <a href="#"></a></p>
+            </div> -->
+  </footer>
+  <script src="About/staffscript.js"></script>
+</body>
+
+</html>
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* styles.css */
+/* Reset styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Nunito', sans-serif;
+}
+
+/* Header styles */
+header {
+background:#f7f7f7;
+/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navbar styles */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 50px;
+position: relative;
+background-color:#f7f7f7;
+height: 70px;
+}
+
+/* Logo styles */
+.logo a {
+text-decoration: none;
+font-size: 20px;
+font-weight: bold;
+color: #333;
+}
+
+/* Nav links styles */
+.nav-links {
+list-style: none;
+display: flex;
+}
+
+/* Nav links items */
+.nav-links li {
+position: relative;
+margin: 0 15px;
+}
+
+/* Link styles */
+.nav-links a {
+text-decoration: none;
+color: #333;
+font-size: 19px;
+padding: 8px 12px;
+font-weight: bold;
+display: block;
+transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+/* color:#644117; */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f7f7f7;
+/* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+z-index: 1;
+list-style: none;
+min-width: 200px;
+padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+display: block; /* Show dropdown */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+display: none; /* Hidden by default */
+flex-direction: column;
+cursor: pointer;
+}
+
+.hamburger .bar {
+width: 25px;
+height: 3px;
+background-color: #333;
+margin: 4px 0;
+transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.nav-links {
+display: none; /* Hidden by default */
+flex-direction: column; /* Stack vertically */
+position: absolute;
+top: 60px; /* Position below the navbar */
+left: 0;
+width: 100%; /* Full width */
+background-color: #f7f7f7; /* White background */
+/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+padding: 10px 0;
+z-index: 1000; /* Ensure it's above other content */
+}
+
+.nav-links.active {
+display: flex; /* Show nav links when active */
+}
+
+.hamburger {
+display: flex; /* Show hamburger icon */
+}
+}
+/* updated */
+/* Dropdown styles */
+.dropdown-content {
+display: none; /* Initially hidden */
+position: absolute;
+background-color: #f7f7f7;
+z-index: 1;
+list-style: none;
+min-width: 200px;
+padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+display: block; /* Show dropdown */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.nav-links {
+display: none; /* Hidden by default */
+flex-direction: column; /* Stack vertically */
+position: absolute;
+top: 60px; /* Position below the navbar */
+left: 0;
+width: 100%; /* Full width */
+background-color: #f7f7f7; /* White background */
+padding: 10px 0;
+z-index: 1000; /* Ensure it's above other content */
+}
+
+.nav-links.active {
+display: flex; /* Show nav links when active */
+}
+
+.dropdown-content {
+position: static; /* Position it within the flow for mobile */
+display: none; /* Keep it hidden until parent is active */
+}
+
+.dropdown.active .dropdown-content {
+display: block; /* Show dropdown on mobile */
+}
+
+.hamburger {
+display: flex; /* Show hamburger icon */
+}
+}
+
+
+
+/* footer */
+/* General Styles */
+.footer {
+background-color: rgba(0, 0, 0, 0.7);
+color: #f7f7f7;
+padding: 20px 0;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.quick-links, .contact-info {
+flex: 1;
+margin: 10px;
+color:#f7f7f7
+}
+
+.quick-links h2, .contact-info h2 {
+margin-bottom: 10px;
+color: #f7f7f7;
+}
+
+hr {
+border: none;
+height: 1px;
+background-color: #f7f7f7;
+margin: 5px 0;
+}
+
+ul {
+list-style: none;
+padding: 0;
+color: #f7f7f7;
+
+}
+
+ul li {
+margin: 8px 0
+color: #f7f7f7;
+}
+
+ul li a {
+color: #f7f7f7;
+text-decoration: none;
+}
+
+ul li a:hover {
+text-decoration: underline;
+}
+
+.contact-info address p {
+margin: 8px 0;
+color: #f7f7f7;
+}
+
+.footer-bottom {
+background-color: rgba(0, 0, 0, 0.7);
+text-align: center;
+padding: 10px;
+color: #f7f7f7;
+margin: 0;
+}
+
+.footer-bottom p {
+margin: 0;
+color: #f7f7f7;
+}
+
+.footer-bottom a {
+color: #f7f7f7;
+text-decoration: none;
+margin: 0;
+}
+
+.footer-bottom a:hover {
+text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+.footer-container {
+flex-direction: column;
+text-align: center;
+}
+
+.quick-links, .contact-info {
+margin: 20px 0;
+}
+}

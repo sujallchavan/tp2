@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* styles.css */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Header styles */
+header {
+    background:#f7f7f7;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: relative;
+    background-color:#f7f7f7;
+    height: 70px;
+}
+
+/* Logo styles */
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Nav links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Nav links items */
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Link styles */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+    padding: 8px 12px;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    /* color:#644117; */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+/* updated */
+/* Dropdown styles */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f7f7f7;
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .dropdown-content {
+        position: static; /* Position it within the flow for mobile */
+        display: none; /* Keep it hidden until parent is active */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+
+/* Past Champions Section */
+.past-champions {
+    padding: 60px;
+    background-color: white;
+    text-align: center;
+}
+
+.past-champions h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    margin-bottom: 40px;
+    overflow-x: auto; /* Enables horizontal scroll on small screens */
+}
+
+.table-wrapper h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Champions Table */
+.champions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Header */
+.champions-table thead {
+    background-color: #ff4c60;
+    color: white;
+}
+
+.champions-table th,
+.champions-table td {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+}
+
+/* Table Body */
+.champions-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.champions-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .champions-table th, .champions-table td {
+        padding: 10px;
+    }
+
+    .past-champions h2 {
+        font-size: 2rem;
+    }
+
+    .table-wrapper h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* footer */
+/* General Styles */
+.main-footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 80px;
+}
+
+.footer-brand {
+    flex: 1;
+    max-width: 25%;
+}
+
+.footer-brand img {
+    height: 60px;
+}
+
+.footer-details {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.footer-location, .footer-contact-info {
+    flex: 1;
+}
+
+.footer-location h4, .footer-contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-location p, .footer-contact-info p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-contact-info a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer-social-links {
+    flex: 1;
+    max-width: 10%;
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.footer-social-links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #00bfff;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-copyright p {
+    color: #ccc;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 0px 40px;
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .footer-brand, .footer-details {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .footer-details {
+        flex-direction: column;
+        align-items: left;
+        margin-top: 20px;
+    }
+
+    .footer-location, .footer-contact-info {
+        max-width: 100%;
+    }
+
+    .footer-social-links {
+        justify-content: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0px 20px;
+    }
+
+    .footer-brand img {
+        height: 50px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 16px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+    }
+
+    .footer-social-links {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-brand img {
+        height: 40px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 14px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+        text-align:left;
+    }
+
+    .footer-social-links {
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .footer-copyright p {
+        font-size: 12px;
+    }
+}

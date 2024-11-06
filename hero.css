@@ -1,0 +1,34 @@
+.hero-section {
+    background: url('images/img-1.jpeg') no-repeat center center/cover; /* Replace with your background image */
+    height: 300px; /* Adjust the height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay for the text */
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text visibility */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Subheading and heading styles */
+.subheading {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}

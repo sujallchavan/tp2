@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School News Section</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f9;
+      }
+      .news-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      .news-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .news-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      .news-item {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .news-item:hover {
+        transform: translateY(-5px);
+      }
+      .news-item img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .news-content {
+        padding: 20px;
+      }
+      .news-category {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .news-category.academics {
+        background-color: #28a745;
+      }
+      .news-category.sports {
+        background-color: #dc3545;
+      }
+      .news-category.culture {
+        background-color: #ffc107;
+      }
+      .news-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #333;
+      }
+      .news-date {
+        font-size: 12px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+      .news-description {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news-section">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        <!-- News Item 1 -->
+        <div class="news-item">
+          <img src="images/img-1.jpeg" alt="News Image" />
+          <div class="news-content">
+            <span class="news-category sports">Sports</span>
+            <h3 class="news-title">Inter-school Football Championship</h3>
+            <p class="news-date">October 10, 2024</p>
+            <p class="news-description">
+              Our school’s football team secured second place in the
+              championship, showcasing excellent teamwork and sportsmanship.
+            </p>
+          </div>
+        </div>
+
+        <!-- News Item 2 -->
+        <div class="news-item">
+          <img src="images/img-3.jpeg" alt="News Image" />
+          <div class="news-content">
+            <span class="news-category academics">Academics</span>
+            <h3 class="news-title">Top Marks in State Exams</h3>
+            <p class="news-date">September 15, 2024</p>
+            <p class="news-description">
+              Several of our students achieved top scores in the state exams,
+              reflecting their hard work and dedication.
+            </p>
+          </div>
+        </div>
+
+        <!-- News Item 3 -->
+        <div class="news-item">
+          <img src="images/img-1.jpeg" alt="News Image" />
+          <div class="news-content">
+            <span class="news-category culture">Culture</span>
+            <h3 class="news-title">Annual Cultural Festival</h3>
+            <p class="news-date">August 5, 2024</p>
+            <p class="news-description">
+              Our annual cultural festival was a vibrant showcase of student
+              talent, featuring performances and exhibitions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more news items as needed -->
+      </div>
+    </div>
+  </body>
+</html>

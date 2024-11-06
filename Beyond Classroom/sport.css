@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* styles.css */
+/* Reset styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Nunito', sans-serif;
+}
+/* hero section */
+.hero-section {
+    background: url('images/img-1.jpeg') no-repeat center center/cover; /* Replace with your background image */
+    height: 340px; /* Adjust the height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay for the text */
+.hero-overlay {
+    background: linear-gradient(to bottom left, rgba(67, 135, 187, 0.5), rgba(0, 0, 0, 0.9) 100%);/* Dark overlay for text visibility */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Subheading and heading styles */
+.subheading {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+/* hero section end */
+
+
+/* Header styles */
+/* Header styles */
+header {
+    background:#f7f7f7;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: relative;
+    background-color:#f7f7f7;
+    height: 70px;
+}
+
+/* Logo styles */
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Nav links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Nav links items */
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Link styles */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+    padding: 8px 12px;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    /* color:#644117; */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+/* updated */
+/* Dropdown styles */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f7f7f7;
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .dropdown-content {
+        position: static; /* Position it within the flow for mobile */
+        display: none; /* Keep it hidden until parent is active */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* start here */
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: url('images/img-1.jpeg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 350px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  /* margin-top: 0px; */
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.container {
+  max-width: 1380px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.team-head-text {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 70px;
+  margin-left: 0px;
+}
+
+.name {
+  font-size: 18px;
+  margin-top: 11px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-weight: 700;
+}
+
+.position {
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.team-card-container {
+  width: 263px;
+  margin-top: 0px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.teamcard-container {
+  justify-content: space-evenly;
+}
+
+.team-img-wrapper {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.team-img {
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .team-card-container {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .team-img {
+    width: 100%;
+  }
+}
+
+
+/*Management  */
+/* Past Champions Section */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('images/img-1.jpeg') no-repeat center center/cover; /* Replace with your background image */
+    height: 340px; /* Adjust the height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay for the text */
+.hero-overlay {
+    background: linear-gradient(to bottom left, rgba(67, 135, 187, 0.5), rgba(0, 0, 0, 0.9) 100%);/* Dark overlay for text visibility */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Subheading and heading styles */
+.subheading {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Achievements Section */
+.achievements {
+    padding: 50px;
+    background-color: white;
+}
+
+.achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.sport-card {
+    background-color: #f9f9f9;
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.sport-banner {
+    width: 100%;
+    height: 300px;
+    display: block;
+    color: black;
+
+}
+
+.sport-card h3 {
+    font-size: 2rem;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.sport-card h3 i {
+    margin-right: 10px;
+    color: #ff4c60;
+}
+
+.sport-card ul {
+    list-style-type: none;
+    padding: 0 20px;
+    margin: 15px 0;
+    color: black;
+}
+
+.sport-card ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.sport-card h4 {
+    font-size: 1.5rem;
+    margin: 20px 20px 10px;
+    color: black;
+}
+
+.student-list {
+    padding: 0 20px 20px;
+    color: black;
+}
+
+.student-list li {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+        color: black;
+    }
+
+    .sport-card h3 {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .student-list li {
+        font-size: 0.9rem;
+        color: black;
+    }
+}
+
+.past-champions {
+    background-color: #fafafa;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.past-champions h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.past-champions p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.past-champions .cta-btn {
+    padding: 12px 25px;
+    background-color: #ff4c60;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.past-champions .cta-btn:hover {
+    background-color: #ff1c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .past-champions h2 {
+        font-size: 2rem;
+    }
+
+    .past-champions p {
+        font-size: 1rem;
+    }
+}
+/* Sports Photo Gallery Section */
+
+.gallery-section {
+    padding: 60px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+/* Sports Photo Gallery Section with Fixed Image Size */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px; /* Fixed height for the images */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the entire area while keeping aspect ratio */
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery-item {
+        height: 150px; /* Smaller height for smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* end here */
+
+
+/* footer */
+/* General Styles */
+.main-footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 80px;
+}
+
+.footer-brand {
+    flex: 1;
+    max-width: 25%;
+}
+
+.footer-brand img {
+    height: 60px;
+}
+
+.footer-details {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.footer-location, .footer-contact-info {
+    flex: 1;
+}
+
+.footer-location h4, .footer-contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-location p, .footer-contact-info p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-contact-info a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer-social-links {
+    flex: 1;
+    max-width: 10%;
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.footer-social-links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #00bfff;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-copyright p {
+    color: #ccc;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 0px 40px;
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .footer-brand, .footer-details {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .footer-details {
+        flex-direction: column;
+        align-items: left;
+        margin-top: 20px;
+    }
+
+    .footer-location, .footer-contact-info {
+        max-width: 100%;
+    }
+
+    .footer-social-links {
+        justify-content: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0px 20px;
+    }
+
+    .footer-brand img {
+        height: 50px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 16px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+    }
+
+    .footer-social-links {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-brand img {
+        height: 40px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 14px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+        text-align:left;
+    }
+
+    .footer-social-links {
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .footer-copyright p {
+        font-size: 12px;
+    }
+}

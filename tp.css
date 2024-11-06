@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-section {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+    width: 30%;
+}
+
+.contact-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-item a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.card {
+    position: relative;
+    background-color: #102a44;
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-image: url('images/img-1.jpeg'); /* Background image here */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.card-title,
+.card-description {
+    position: relative;
+    z-index: 2; /* To ensure text is above the overlay */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.main-container {
+    width: 100%; /* Full width */
+    height: 310px; /* Fixed height */
+    display: flex; /* Optional: Allows for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflowing content */
+    background-color: #102a44;
+}
+
+.strip-section {
+    background-color: #102a44;
+    width: calc(100% - 400px); /* 100% width minus 200px on each side */
+    max-width: 800px; /* Maximum width of the section */
+    margin: 0 auto; /* Center the strip section */
+    height: 300px; /* Fixed height for the section */
+    position: relative; /* Required for absolute positioning of images */
+     /* Background color for the strip */
+    border: 2px solid #102a44; /* Border for definition */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Padding inside the section */
+    overflow: hidden; /* Hide overflow to keep moving images contained */
+}
+
+.image-container {
+    display: flex; /* Use flexbox to arrange images in a row */
+    animation: move-left 15s linear infinite; /* Animation settings */
+    width: calc(400px * 5 + 40px); /* Adjust to total width of all images and margins (5 images + 4 margins) */
+}
+
+.image-wrapper {
+    width: 400px; /* Set a fixed width for each image wrapper (adjusted) */
+    height: 300px; /* Set a fixed height for each image wrapper (unchanged) */
+    display: flex; /* Center image within the wrapper */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-right: 50px; /* Add right margin for spacing between images */
+}
+
+/* Remove margin from the last image to prevent extra space at the end */
+.image-wrapper:last-child {
+    margin-right: 0; /* No margin on the last image */
+}
+
+.moving-image {
+    height: 100%; /* Set the height of the images to fill the wrapper height */
+    width: 100%; /* Set the width of the images to fill the wrapper width */
+    object-fit: cover; /* Ensure images cover the space without distortion */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Keyframes for the left movement animation */
+@keyframes move-left {
+    0% {
+        transform: translateX(100%); /* Start from the right (offscreen) */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left (offscreen) */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .strip-section {
+        width: calc(100% - 100px); /* Reduce width on smaller screens */
+        margin: 0 50px; /* Smaller margins */
+    }
+
+    .image-wrapper {
+        width: 250px; /* Reduce width for smaller screens */
+        height: 200px; /* Reduce height for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .strip-section {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .image-wrapper {
+        width: 150px; /* Further reduce width for mobile */
+        height: 150px; /* Further reduce height for mobile */
+    }
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    text-align: center;
+    width: 20%;
+}
+
+.info-title {
+    color: #102A43;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.info-subtitle {
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

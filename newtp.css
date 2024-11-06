@@ -1,0 +1,173 @@
+<<<<<<< HEAD
+.background-section {
+    position: relative; /* Ensure child elements can be positioned absolutely */
+    width: 100%; /* Full width of the screen */
+    height: 100vh; /* Full height for the section */
+    background-image: url('images/img-1.jpeg'); /* Set your background image here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.background-section::before {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(87, 92, 124, 0.9); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure overlay is above the background but below content */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin: 30px auto;
+    max-width: 1300px; /* Container max width */
+  
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+    position: relative; /* Necessary for positioning */
+    z-index: 2; /* Ensure container is above overlay */
+}
+
+.image-section {
+    flex: 1; /* Allow the image section to grow */
+    padding: 20px;
+    text-align: center; /* Center text below image */
+}
+
+.principal-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+    margin-top: 10px; /* Add some margin for spacing */
+}
+
+.text-section {
+    flex: 2; /* Allow the text section to grow more than image */
+    padding: 20px;
+}
+
+p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: #ffffff; /* Slightly darker color for text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack image and text on smaller screens */
+    }
+
+    .image-section {
+        text-align: center; /* Center the image */
+    }
+
+    .text-section {
+        padding: 10px; /* Reduced padding for mobile */
+    }
+}
+=======
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e6f0;
+}
+
+#leadership-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url('images/img-1.jpeg'); /* Add your hero image path here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    color: #fff;
+    height: 100vh;
+    position: relative; /* Allow absolute positioning of inner elements */
+}
+
+.overlay {
+    position: absolute; /* Overlay must be positioned absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(87, 92, 124, 0.9); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure overlay is above the background but below text */
+}
+
+.leader-image-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure image and text are above the overlay */
+}
+
+.leader-photo {
+    max-width: 80%;
+    border-radius: 8px;
+}
+
+.leader-title {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.leader-designation {
+    font-size: 1em;
+    display: block;
+    font-weight: normal;
+}
+
+.leader-text-content {
+    flex: 2;
+    padding-left: 50px;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.leader-heading {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.leader-description {
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.leader-signature {
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    #leadership-highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leader-text-content {
+        padding-left: 0;
+    }
+
+    .leader-photo {
+        max-width: 55%;
+    }
+}
+>>>>>>> 5b4f8cc10564707a10138217169349a035fa2640

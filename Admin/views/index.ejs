@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Assuming you have CSS in public/css -->
+  <style>
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;  /* Ensures the image fits the box without distortion */
+    }
+  </style>
+</head>
+<body>
+  <h1>Upload an Image</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Enter Image Name" required><br><br>
+    <input type="file" name="image" required><br><br>
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Uploaded Images</h2>
+  <div>
+    <% images.forEach(image => { %>
+      <div>
+        <p><%= image.name %></p>
+        <!-- Use the route to fetch and display the image -->
+        <img src="/image/<%= image._id %>" alt="<%= image.name %>">
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

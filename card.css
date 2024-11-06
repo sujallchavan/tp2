@@ -1,0 +1,184 @@
+/* sujal */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+    
+  .ethos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    padding: 50px 20px;
+    color: white;
+  }
+  
+  .ethos-box {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    border-radius: 0px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  .ethos-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 42, 68, 0.9); 
+    z-index: 1;
+    border-radius: 0px;
+  }
+  
+  .ethos-box h2, .ethos-box p {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  .ethos-box h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    padding-top: 40px;
+  }
+  
+  .ethos-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding: 0 45px 45px;
+
+  }
+  
+  .ethos-box2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 20, 30, 0.85); 
+    z-index: 1;
+    border-radius: 0px;
+}
+
+
+
+  .ethos-box1 {
+    background-image: url('images/img-3.jpeg');
+  }
+  
+  .ethos-box2 {
+    background-image: url('images/img-1.jpeg');
+  }
+  
+  .ethos-box3 {
+    background-image: url('images/img-1.jpeg');
+  }
+  
+
+  @media (max-width: 992px) {
+    .ethos-container {
+      flex-direction: column;
+      gap: 0px;
+    }
+  
+    .ethos-box {
+      padding: 15px;
+    }
+  
+    .ethos-box h2 {
+      font-size: 1.6rem;
+    }
+  
+    .ethos-box p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ethos-box h2 {
+      font-size: 1.4rem;
+    }
+    .ethos-box p {
+      font-size: 0.85rem;
+    }
+  }
+  
+   */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0e1f33;
+}
+
+.features-strip {
+    background-color: #0e1f33;
+    padding: 50px 0;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 200px;
+    gap: 40px;
+    color: #ffffff;
+}
+
+.feature-box {
+    text-align: left; /* Align text and icon to the left */
+    flex: 1;
+    padding: 7px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Icon color */
+}
+
+.feature-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    font-size:0.8rem;
+    line-height: 1.4;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .features-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .feature-box {
+        margin-bottom: 20px;
+    }
+}

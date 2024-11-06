@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+</head>
+<body>
+  <h1>Upload an Image</h1>
+
+  <!-- Image name input -->
+  <input type="text" id="imageName" placeholder="Enter Image Name" required><br><br>
+
+  <!-- File input -->
+  <input type="file" id="imageFile" required><br><br>
+
+  <!-- Custom Upload Button -->
+  <button id="uploadButton">Upload</button>
+
+  <!-- Status message -->
+  <p id="statusMessage"></p>
+
+  <script>
+    // Event listener for the upload button
+    document.getElementById('uploadButton').addEventListener('click', async function() {
+
+      // Get image name and file
+      const imageName = document.getElementById('imageName').value;
+      const imageFile = document.getElementById('imageFile').files[0];
+
+      if (!imageName || !imageFile) {
+        // If fields are missing, show an error
+        document.getElementById('statusMessage').textContent = 'Please enter image name and select an image.';
+        return;
+      }
+
+      // Create FormData object
+      const formData = new FormData();
+      formData.append('name', imageName);
+      formData.append('image', imageFile);
+
+      // Display a loading message
+      document.getElementById('statusMessage').textContent = 'Uploading image...';
+
+      try {
+        // Make a POST request to the upload API
+        const response = await fetch('http://localhost:3000/upload', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          // On successful upload, display a success message
+          const result = await response.text();
+          document.getElementById('statusMessage').textContent = 'Image uploaded successfully!';
+          console.log(result);
+
+          // Reset inputs after upload
+          document.getElementById('imageName').value = '';
+          document.getElementById('imageFile').value = '';
+        } else {
+          // Display an error message if the upload fails
+          const errorMessage = await response.text();
+          document.getElementById('statusMessage').textContent = 'Failed to upload image: ' + errorMessage;
+        }
+      } catch (error) {
+        // Handle any errors during the upload
+        console.error('Error uploading image:', error);
+        document.getElementById('statusMessage').textContent = 'Error uploading image. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* styles.css */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Header styles */
+header {
+    background:#f7f7f7;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: relative;
+    background-color:#f7f7f7;
+    height: 70px;
+}
+
+/* Logo styles */
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Nav links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Nav links items */
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Link styles */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+    padding: 8px 12px;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    /* color:#644117; */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+/* updated */
+/* Dropdown styles */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f7f7f7;
+    z-index: 1;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Show dropdown when parent is active */
+.dropdown.active .dropdown-content {
+    display: block; /* Show dropdown */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #f7f7f7; /* White background */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .dropdown-content {
+        position: static; /* Position it within the flow for mobile */
+        display: none; /* Keep it hidden until parent is active */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  /* margin-top: 0px; */
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.container {
+  max-width: 1380px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.team-head-text {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 70px;
+  margin-left: 0px;
+}
+
+.name {
+  font-size: 18px;
+  margin-top: 11px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-weight: 700;
+}
+
+.position {
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.team-card-container {
+  width: 263px;
+  margin-top: 0px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.teamcard-container {
+  justify-content: space-evenly;
+}
+
+.team-img-wrapper {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.team-img {
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .team-card-container {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .team-img {
+    width: 100%;
+  }
+}
+
+/* Hero section styles */
+
+.hero-section {
+    background: url('img-1.jpeg') no-repeat center center/cover; /* Replace with your background image */
+    height: 300px; /* Adjust the height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay for the text */
+.hero-overlay {
+    background: linear-gradient(to bottom left, rgba(67, 135, 187, 0.5), rgba(0, 0, 0, 1) 100%); /* Dark overlay for text visibility */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Subheading and heading styles */
+.subheading {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+/* hero-section end */
+
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background-color: #36b03c;
+    margin-bottom: 20px;
+}
+
+.columns {
+    display: flex;
+    gap: 40px;
+}
+
+.intro,
+.curriculum-values {
+    flex: 1;
+}
+
+.intro p,
+.curriculum-values p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    .columns {
+        flex-direction: column;
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+    .underline {
+        width: 50px; /* Slightly reduce width on smaller screens */
+        margin: 15px 0; /* Reduced vertical margin */
+    }
+    
+    .intro p,
+    .curriculum-values p {
+        font-size: 15px;
+    }
+    .intro,
+    .curriculum-values {
+        padding: 20px; /* Reduced padding on very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 20px;
+        padding: 20px;
+    }
+    
+    .underline {
+        width: 50px;
+        height: 2px;
+        padding: 20px;
+        margin: 10px auto; 
+    }
+    
+    .breadcrumb {
+        font-size: 13px;
+    }
+
+    
+    .intro,
+    .curriculum-values {
+        padding: 20px; /* Reduced padding on very small screens */
+    }
+    
+    .intro p,
+    .curriculum-values p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+
+.background-section {
+    padding: 20px 0px;
+    width: 100%; /* Full width of the screen */
+    background-color: #f9f9f9; /* Blue background color */
+    
+     /* Optional padding for top and bottom */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+   
+    overflow: hidden;
+}
+
+.text-section, .image-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-section {
+    background-color: #f9f9f9;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+}
+
+h2 {
+    color: #333;
+    padding-bottom: 20px;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.image-bottom-section {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 80px;
+}
+
+.footer-brand {
+    flex: 1;
+    max-width: 25%;
+}
+
+.footer-brand img {
+    height: 60px;
+}
+
+.footer-details {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.footer-location, .footer-contact-info {
+    flex: 1;
+}
+
+.footer-location h4, .footer-contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-location p, .footer-contact-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+}
+
+.footer-contact-info a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer-social-links {
+    flex: 1;
+    max-width: 10%;
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.footer-social-links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #00bfff;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-copyright p {
+    color: #ccc;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 0px 40px;
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .footer-brand, .footer-details {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .footer-details {
+        flex-direction: column;
+        align-items: left;
+        margin-top: 20px;
+    }
+
+    .footer-location, .footer-contact-info {
+        max-width: 100%;
+    }
+
+    .footer-social-links {
+        justify-content: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0px 20px;
+    }
+
+    .footer-brand img {
+        height: 50px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 16px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+    }
+
+    .footer-social-links {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-brand img {
+        height: 40px;
+    }
+
+    .footer-location h4, .footer-contact-info h4 {
+        font-size: 14px;
+    }
+
+    .footer-location p, .footer-contact-info p {
+        font-size: 12px;
+        text-align:left;
+    }
+
+    .footer-social-links {
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .footer-copyright p {
+        font-size: 12px;
+    }
+}
